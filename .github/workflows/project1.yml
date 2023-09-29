@@ -6,13 +6,14 @@ branch: main
 jobs:
    build:
    run_on: ubuntu_latest
-      name: Git Version
-      user: codacy/git-version@2.4.0
+      name: Git clone
+      uses: codacy/git-version@2.4.0
       run: git clone -b self-serve-layout
        with 
-           version:- name: Git Version 2.4.0
+           git version: 2.4.0
    run: npm install
-   run: npm build 
+   run: npm build
+   run: npm
    
 echo "Installation Completed"
 
