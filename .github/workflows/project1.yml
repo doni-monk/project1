@@ -1,0 +1,8 @@
+name:project1
+
+on:[PUSH]
+
+jobs:
+   build:
+
+   run_on:ubuntu_latest
