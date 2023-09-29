@@ -11,9 +11,9 @@ jobs:
       run: git clone -b self-serve-layout
        with 
            version:- name: Git Version 2.4.0
-   npm install
-   npm build 
+   run: npm install
+   run: npm build 
    
 echo "Installation Completed"
 
-ng build --prod
+run: ng build --prod
