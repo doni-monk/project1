@@ -6,15 +6,15 @@ branch: main
 jobs:
    build:
    run_on: ubuntu_latest
-      name: Git clone
+      name: Git step up
       uses: codacy/git-version@2.4.0
       run: git clone -b self-serve-layout
        with 
            git version: 2.4.0
-   run: npm install
-   run: npm build
-   run: npm
+      run: npm install
+      run: npm build
+      run: npm
    
-echo "Installation Completed"
+      run: echo "Installation Completed"
 
-run: ng build --prod
+      run: ng build --prod
