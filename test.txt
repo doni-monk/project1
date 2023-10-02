@@ -1,30 +1,4 @@
-name= node.js
-
-   on:
-     push:
-       branch:[ main ]
-
-      jobs:
-         build:
-           run-on: ububtu-latest
-
-          strategy:
-           matrix:
-             node-version: [10.x,12.x,14.x]
-
-         steps: 
-          -uses: actions/checkout@v2
-          -name: use node.js $ {{ matrix.node-version }}
-           uses: action/setup-node@v1
-           with:
-              node-version: $ {{ matrix.node-version }}
-           with:
-              key: ${{ secrets.GOOGLE_CLOUD_VM_SSH }}
-              host: ${{ secrets.GOOGLE_CLOUD_VM_IP }}
-           username: ${{ secrets.GOOGLE_CLOUD_VM_USERNAME }}
-          script:
-               pm2 delete all
-           cd/var/app/tdd-nodejs
-             git pull
-             nmp install
-            pm2 start nmp--start
+    
+<div>
+<h5 style="color:black;">my name <span style="colour:white">is doni naik</span>
+</div>
