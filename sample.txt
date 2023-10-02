@@ -1,1 +1,7 @@
-main
+name: hello world
+on: push
+  jobs: 
+     run_on: ubuntu-latest
+       steps:
+          -name: my setup
+            run: echo "hello world"
