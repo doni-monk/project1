@@ -1,3 +1,8 @@
-<div>
-<h5 style="color:black;">my name <span style="colour:white">is doni naik</span>
-</div>
+name: hello world
+on: push
+  jobs: 
+     run_on: ubuntu-latest
+       steps:
+          -name: my setup
+            run: echo "hello world"
+
