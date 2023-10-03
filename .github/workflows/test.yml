@@ -1,15 +1,19 @@
 name: project1
+on: [pull_request, push]
 
-on:
-   push:
-       branche:
-           -main
+jobs:
+  branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract branch name on push
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: echo "::set-env name= branch4 ::$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
 
-        steps:
-               -name: main branch
-              -id: main
-              -uses: tj-action/main@v7
+      - name: Extract branch name on pull request
+        if: github.event_name == 'branch3'
+        run: echo "::set-env name=branch3 ::$(echo ${GITHUB_HEAD_REF})"
 
-              -name: dev branch
-               run:
-                    echo"${{ steps.main .outputs. dev }}"
+      - name: Print branch name
+        run: echo 'The branch name is' $branch4
