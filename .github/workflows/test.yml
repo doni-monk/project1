@@ -12,7 +12,7 @@ jobs:
         id: branch4
 
       - name: Extract branch name on pull request
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'test.txt'
         run: echo "::set-env name= test.txt "
 
       - name: Print branch name
