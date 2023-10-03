@@ -1,15 +1,11 @@
-name: project1
-on: [pull_request, push]
+name: print branches
+on: push
 
 jobs:
-  branch:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Extract branch name on push
-        if: github.event_name != 'pull_request'
-        shell: bash
-        run: echo "::set-env name= branch4"
-        id: branch4
-        
-      - name: Print branch name
-        run: echo 'The branch name is' $ "branch4"
+    - uses: actions/checkout@v1
+    - run: npm ci
+    - uses: nelonoel/branch4e@v1
+    - run: echo ${branch4}
