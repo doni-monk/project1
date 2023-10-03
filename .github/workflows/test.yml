@@ -8,7 +8,7 @@ jobs:
       - name: Extract branch name on push
         if: github.event_name != 'pull_request'
         shell: bash
-        run: echo "::set-env name= branch4 "
+        run: echo "::set-env name= branch3 "
         id: branch4
 
       - name: Extract branch name on pull request
