@@ -1,0 +1,15 @@
+name: project1
+
+on:
+   push:
+       branche:
+           -main
+
+        steps:
+               -name: main branch
+              -id: main
+              -uses: tj-action/main@v7
+
+              -name: dev branch
+               run:
+                    echo"${{ steps.main .outputs. dev }}"
