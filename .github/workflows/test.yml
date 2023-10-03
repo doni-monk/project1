@@ -9,7 +9,7 @@ jobs:
         if: github.event_name != 'pull_request'
         shell: bash
         run: echo "::set-env name= branch4 ::$(echo ${GITHUB_REF#refs/heads/})"
-        id: extract_branch
+        id: branch4
 
       - name: Extract branch name on pull request
         if: github.event_name == 'branch3'
