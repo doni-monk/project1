@@ -1,0 +1,12 @@
+name: project1
+
+on: [pull_request, push]
+
+jobs:
+  branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract branch name on push
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: echo "branch3"
