@@ -7,4 +7,4 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v1
       - name: branch3
-        run: echo running on branch $"main"
+        run: echo running on branch ${GITHUB_REF##*/}
