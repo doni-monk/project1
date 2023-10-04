@@ -6,5 +6,5 @@ jobs:
     steps:
       - name: Git checkout
         uses: actions/checkout@v1
-      - name: branch3
+      - name: main
         run: echo running on branch $"branch4"
