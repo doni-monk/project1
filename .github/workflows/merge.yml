@@ -1,0 +1,10 @@
+name: merge
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v1
+      - name: branch3
+        run: echo running on branch $"branch4"
